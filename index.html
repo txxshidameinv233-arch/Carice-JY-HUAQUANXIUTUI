@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>花拳绣腿</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- 进度条 -->
+<div class="progress" id="progress"></div>
+
+<!-- 侧边竖排索引 -->
+<aside class="rail" id="rail">
+  <span class="rail-line"></span>
+</aside>
+
+<!-- 封面 -->
+<header class="cover" id="cover">
+  <div class="seal-bg" id="sealBg" aria-hidden="true"></div>
+  <div class="cover-inner">
+    <h1 class="brand" id="brand" aria-label="花拳绣腿">
+      <span class="zi" data-reveal data-flower="peach"><span class="zi-char" style="--src:url('images/title/hua.png')"></span></span>
+      <span class="zi" data-reveal style="--d:.1s" data-flower="mum"><span class="zi-char" style="--src:url('images/title/quan.png')"></span></span>
+      <span class="zi" data-reveal style="--d:.2s" data-flower="hydr"><span class="zi-char" style="--src:url('images/title/xiu.png')"></span></span>
+      <span class="zi" data-reveal style="--d:.3s" data-flower="bell"><span class="zi-char" style="--src:url('images/title/tui.png')"></span></span>
+    </h1>
+    <p class="brand-tip" data-reveal style="--d:.6s">悬停生花 · 轻触绽放</p>
+  </div>
+  <a href="#g1" class="cover-down" data-reveal style="--d:.7s"><i></i></a>
+</header>
+
+<!-- 画作区，由 JS 注入 -->
+<main id="works"></main>
+
+<!-- 尾印 -->
+<footer class="end" id="end">
+  <div class="end-stamp">
+    <img class="end-seal" src="images/seal.png" alt="花拳绣腿">
+  </div>
+</footer>
+
+<!-- 回到开头的印章转场层 -->
+<div class="seal-flood" id="sealFlood" aria-hidden="true"></div>
+
+<!-- 灯箱：背景画在后，人物抠图在前浮起放大 -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="关闭">&times;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="上一张">&#8249;</button>
+  <div class="lb-stage" id="lbStage">
+    <img class="lb-back" id="lbBack" src="" alt="">
+    <img class="lb-char" id="lbChar" src="" alt="">
+  </div>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="下一张">&#8250;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
