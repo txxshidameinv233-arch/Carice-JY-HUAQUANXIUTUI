@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我不在乎 · i don't care</title>
+<meta name="description" content="一部无言的黑白短篇漫画 —— 黑、白，与一点红。">
+<meta property="og:title" content="我不在乎 · i don't care">
+<meta property="og:description" content="一部无言的黑白短篇漫画。">
+<meta property="og:image" content="pages/p5.jpg">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@200;300;500;700&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- 顶部进度 -->
+<div class="progress" id="progress"></div>
+
+<!-- 颗粒 + 暗角 覆层 -->
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- 侧边页码指示 -->
+<aside class="rail" id="rail" aria-hidden="true">
+  <span class="rail-count"><b id="railCur">00</b><i>/06</i></span>
+  <span class="rail-line"></span>
+</aside>
+
+<!-- 首屏 -->
+<header class="hero" id="hero">
+  <div class="hero-ghost" id="heroGhost" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="hero-kicker" data-in style="--d:.1s">短篇漫画 · 无言 · 黑白</p>
+    <h1 class="hero-title" aria-label="我不在乎">
+      <span class="zi" data-in style="--d:.25s">我</span>
+      <span class="zi" data-in style="--d:.40s">不</span>
+      <span class="zi" data-in style="--d:.55s">在</span>
+      <span class="zi" data-in style="--d:.70s">乎</span>
+    </h1>
+    <p class="hero-en" data-in style="--d:.95s">i don't care</p>
+    <p class="hero-tip" data-in style="--d:1.2s">向下滚动，开始阅读</p>
+  </div>
+  <a class="hero-down" href="#read" aria-label="开始阅读" data-in style="--d:1.4s"><i></i></a>
+</header>
+
+<!-- 引语 -->
+<section class="quote" id="quote">
+  <p class="quote-line">六页，没有一句台词。</p>
+  <p class="quote-line">只有黑、白，与一点红。</p>
+</section>
+
+<!-- 阅读区，页面由 JS 注入 -->
+<main class="reader" id="read"></main>
+
+<!-- 尾声 -->
+<footer class="end" id="end">
+  <p class="end-en">i don't care</p>
+  <h2 class="end-title">我不在乎</h2>
+  <p class="end-meta">全篇完 · 共 6 页</p>
+  <button class="end-top" id="toTop">↑ 回到开篇</button>
+  <p class="end-credit">作品版权归原作者所有</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
